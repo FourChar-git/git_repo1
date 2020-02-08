@@ -23,7 +23,7 @@ pipeline {
 			steps {
 			     sh '''#!/bin/bash
 				git commit -m "New Commit 3"
-				git push -u origin master
+				git push origin HEAD:master
 				echo "Stop"
 				''' 
 			}
