@@ -21,15 +21,17 @@ pipeline {
 		stage('CommitFileToGit') {
 			steps {
 			     sh '''#!/bin/bash
-				 git commit -m "New Commit"
+				 git commit -m "New Commit 2"
 				 '''
 			    
 			}
 		}
 		stage('PushFileToGit') {
 			steps {
-				sh "git push origin master"
+				sh '''#!/bin/bash
+				git push -u origin master
 				echo "Stop"
+				'''
 			}
 		}
 	}
