@@ -1,28 +1,34 @@
 pipeline {
    agent any
    stages {
+
+	stage('Initiation'){
+		steps{
+			echo "This initiation stage of pipeline"
+		}
+	}
         stage('CreateNewFile'){
-            steps{
-                cd ~/git_repo
-                touch WelcomeJenkinsFile2.txt
-                ls > WelcomeJenkinsFile2.txt
-            }
+		steps{
+	                cd ~/git_repo
+	                touch WelcomeJenkinsFile2.txt
+	                ls > WelcomeJenkinsFile2.txt
+	            }
         }
         stage('AddFileToGit'){
-            steps{
-                git add WelcomeJenkinsFile2.txt
-            }
+	            steps{
+	                git add WelcomeJenkinsFile2.txt
+	            }
         }
         stage('CommitFileToGit'){
-            steps{
-                git commit -m "Third Commit"
-            }
+	            steps{
+	                git commit -m "Third Commit"
+	            }
         }
         stage('PushFileToGit'){
-            steps{
-                git push origin master
-                echo "Stop"
-            }
+	            steps{
+	                git push origin master
+	                echo "Stop"
+	            }
         }
    }
 }
