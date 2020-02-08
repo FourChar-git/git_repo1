@@ -20,7 +20,7 @@ pipeline {
 		}
 		stage('CommitFileToGit') {
 			steps {
-				sh "git commit -m "Third Commit""
+				sh git commit -m "Third Commit"
 			}
 		}
 		stage('PushFileToGit') {
