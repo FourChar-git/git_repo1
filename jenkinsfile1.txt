@@ -4,6 +4,7 @@ pipeline {
 		stage('Initiation') {
 			steps {
 				echo "This initiation stage of pipeline"
+				sh "git init"
 			}
 		}
         	stage('CreateNewFile') {
