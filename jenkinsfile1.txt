@@ -18,20 +18,19 @@ pipeline {
 				sh "git add WelcomeJenkinsFile2.txt"
 			}
 		}
-		stage('CommitFileToGit') {
+		stage('CommitandPushFileToGit') {
 			steps {
 			     sh '''#!/bin/bash
-				 git commit -m "New Commit 2"
-				 '''
-			    
-			}
-		}
-		stage('PushFileToGit') {
-			steps {
-				sh '''#!/bin/bash
+				git commit -m "New Commit 3"
 				git push -u origin master
 				echo "Stop"
-				'''
+				''' 
+			}
+		}
+		stage('lastStage') {
+			steps {
+				echo "Last stage of Pipeline"
+				
 			}
 		}
 	}
