@@ -20,7 +20,10 @@ pipeline {
 		}
 		stage('CommitFileToGit') {
 			steps {
-				sh "git commit -m 'New commit'"
+			     sh '''#!/bin/bash
+				 git commit -m "New Commit"
+				 '''
+			    
 			}
 		}
 		stage('PushFileToGit') {
