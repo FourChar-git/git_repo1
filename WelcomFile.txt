@@ -1,0 +1,6 @@
+total 16
+drwxrwxr-x  3 fourchar fourchar 4096 Feb  8 12:45 .
+drwxr-xr-x 24 fourchar fourchar 4096 Feb  8 12:39 ..
+drwxrwxr-x  8 fourchar fourchar 4096 Feb  8 12:43 .git
+-rw-rw-r--  1 fourchar fourchar   11 Feb  8 12:43 README.md
+-rw-rw-r--  1 fourchar fourchar    0 Feb  8 12:46 WelcomFile.txt
