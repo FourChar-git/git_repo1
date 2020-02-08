@@ -9,8 +9,8 @@ pipeline {
         	stage('CreateNewFile') {
 			steps {
 		                sh "cd ~/git_repo"
-		                sh "touch WelcomeJenkinsFile2.txt"
-		                sh "ls > WelcomeJenkinsFile2.txt"
+		                sh "touch WelcomeJenkinsFile3.txt"
+		                sh "ls > WelcomeJenkinsFile3.txt"
 			}
 		}
 		stage('AddFileToGit') {
