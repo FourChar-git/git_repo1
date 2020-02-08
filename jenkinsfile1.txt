@@ -1,0 +1,28 @@
+pipeline {
+   agent any
+   stages {
+        stage('CreateNewFile'){
+            steps{
+                cd ~/git_repo
+                touch WelcomeJenkinsFile2.txt
+                ls > WelcomeJenkinsFile2.txt
+            }
+        }
+        stage('AddFileToGit'){
+            steps{
+                git add WelcomeJenkinsFile2.txt
+            }
+        }
+        stage('CommitFileToGit'){
+            steps{
+                git commit -m "Third Commit"
+            }
+        }
+        stage('PushFileToGit'){
+            steps{
+                git push origin master
+                echo "Stop"
+            }
+        }
+   }
+}
