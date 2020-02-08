@@ -15,7 +15,7 @@ pipeline {
 		}
 		stage('AddFileToGit') {
 			steps {
-				sh "git add WelcomeJenkinsFile2.txt"
+				sh "git add ."
 			}
 		}
 		stage('CommitandPushFileToGit') {
