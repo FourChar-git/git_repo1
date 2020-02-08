@@ -1,0 +1,6 @@
+.
+..
+.git
+JenkinsWelcomeFile.txt
+README.md
+WelcomFile.txt
