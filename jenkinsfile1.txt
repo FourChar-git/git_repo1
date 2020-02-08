@@ -4,7 +4,6 @@ pipeline {
 		stage('Initiation') {
 			steps {
 				echo "This initiation stage of pipeline"
-				sh "git init"
 			}
 		}
         	stage('CreateNewFile') {
@@ -19,13 +18,17 @@ pipeline {
 				sh "git add ."
 			}
 		}
-		stage('CommitandPushFileToGit') {
+		stage('CommitFileToGit') {
 			steps {
 			     sh '''#!/bin/bash
 				git commit -m "New Commit 3"
-				git push origin HEAD:master
-				echo "Stop"
 				''' 
+			}
+		}
+		stage('Push File To Github') {
+			steps {
+				sh "git push origin HEAD:master"
+				
 			}
 		}
 		stage('lastStage') {
